@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jNr-Mp-0uH">
+            <objects>
+                <viewController id="r3v-Bt-5my" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pdk-6W-O9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="Uvg-O6-1cE">
+                                <rect key="frame" x="30" y="384" width="354" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8LV-O4-TLH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JGZ-Yi-WyR"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="Uvg-O6-1cE" firstAttribute="centerX" secondItem="pdk-6W-O9Z" secondAttribute="centerX" id="7IK-XI-vfd"/>
+                            <constraint firstItem="JGZ-Yi-WyR" firstAttribute="trailing" secondItem="Uvg-O6-1cE" secondAttribute="trailing" constant="30" id="ZrZ-NQ-kPk"/>
+                            <constraint firstItem="Uvg-O6-1cE" firstAttribute="leading" secondItem="JGZ-Yi-WyR" secondAttribute="leading" constant="30" id="vND-sD-qdc"/>
+                            <constraint firstItem="Uvg-O6-1cE" firstAttribute="centerY" secondItem="pdk-6W-O9Z" secondAttribute="centerY" id="xlR-xY-JU6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayU-CW-iin" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appstore" width="1024" height="1024"/>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="0.94499999284744263" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

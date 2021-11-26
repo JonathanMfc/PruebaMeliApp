@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MeliApp" customModuleProvider="target">
+            <connections>
+                <outlet property="categoriesCollectionView" destination="ZnK-et-6wq" id="5KY-hd-zhG"/>
+                <outlet property="meliSearchBar" destination="tQT-cl-Ibb" id="02v-bZ-V0r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Buscar producto" translatesAutoresizingMaskIntoConstraints="NO" id="tQT-cl-Ibb">
+                    <rect key="frame" x="0.0" y="52" width="414" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Xn9-bn-nxL"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Vaa-jy-MFt"/>
+                    </connections>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUj-II-Bwo">
+                    <rect key="frame" x="0.0" y="120" width="414" height="742"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZnK-et-6wq">
+                            <rect key="frame" x="16" y="0.0" width="382" height="742"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="fQH-jv-uVe">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="0gl-Q3-PTc"/>
+                                <outlet property="delegate" destination="-1" id="xsc-0P-Vje"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ZnK-et-6wq" secondAttribute="trailing" constant="16" id="5vD-3F-V0H"/>
+                        <constraint firstAttribute="bottom" secondItem="ZnK-et-6wq" secondAttribute="bottom" id="Io5-Du-wYT"/>
+                        <constraint firstItem="ZnK-et-6wq" firstAttribute="top" secondItem="AUj-II-Bwo" secondAttribute="top" id="cgu-T8-gRT"/>
+                        <constraint firstItem="ZnK-et-6wq" firstAttribute="leading" secondItem="AUj-II-Bwo" secondAttribute="leading" constant="16" id="fit-uY-VCU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="PrimaryColor"/>
+            <constraints>
+                <constraint firstItem="tQT-cl-Ibb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6N4-vT-5xi"/>
+                <constraint firstItem="tQT-cl-Ibb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7XJ-kj-37s"/>
+                <constraint firstItem="tQT-cl-Ibb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="Fzl-S0-Zct"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AUj-II-Bwo" secondAttribute="bottom" id="GY8-bB-yRv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AUj-II-Bwo" secondAttribute="trailing" id="KRb-tc-npw"/>
+                <constraint firstItem="AUj-II-Bwo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gUC-NL-0jt"/>
+                <constraint firstItem="AUj-II-Bwo" firstAttribute="top" secondItem="tQT-cl-Ibb" secondAttribute="bottom" constant="8" id="vpO-YF-5NY"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="0.94499999284744263" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
